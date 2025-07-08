@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import confetti from 'canvas-confetti';
 
 function ToDoList() {
     const [tasks, setTasks] = useState(() => {
@@ -13,31 +12,7 @@ function ToDoList() {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }, [tasks]);
 
-    // Confetti easter egg for 'Make Raul proud'
-    useEffect(() => {
-        const prevTasks = prevTasksRef.current;
-        const prevRaul = prevTasks.find(
-            t => t.text.trim().toLowerCase() === 'make raul proud'
-        );
-        const currRaul = tasks.find(
-            t => t.text.trim().toLowerCase() === 'make raul proud'
-        );
-        if (currRaul && currRaul.completed && (!prevRaul || !prevRaul.completed)) {
-            // LOTS of confetti, multiple bursts
-            for (let i = 0; i < 6; i++) {
-                setTimeout(() => {
-                    confetti({
-                        particleCount: 250,
-                        spread: 120,
-                        startVelocity: 60,
-                        origin: { y: 0.6 },
-                        zIndex: 9999
-                    });
-                }, i * 200);
-            }
-        }
-        prevTasksRef.current = tasks;
-    }, [tasks]);
+    // Removed confetti easter egg effect
 
     function handleInputChange(event) {
         setNewTask(event.target.value);
