@@ -1,0 +1,117 @@
+body {
+  background: linear-gradient(135deg, #8276ea 0%, #a8edea 100%);
+  min-height: 100vh;
+}
+
+.to-do-list {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  margin: 60px auto 0 auto;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(50,50,93,0.12), 0 1.5px 3px 0 rgba(0,0,0,0.10);
+  padding: 40px 32px 32px 32px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+  color: #4b3fa7;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.input-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  padding: 12px 16px;
+  border: 2px solid #a29494;
+  border-radius: 8px;
+  color: #212020;
+  outline: none;
+  width: 65%;
+  transition: border-color 0.2s;
+}
+input[type="text"]:focus {
+  border-color: #8276ea;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(130,118,234,0.08);
+}
+.add-button {
+  background-color: #4CAF50;
+}
+.add-button:hover {
+  background-color: #388E3C;
+}
+.delete-button {
+  background-color: #F44336;
+}
+.delete-button:hover {
+  background-color: #C62828;
+}
+.up-button {
+  background-color: #FFEB3B;
+  color: #333;
+}
+.up-button:hover {
+  background-color: #FBC02D;
+}
+.down-button {
+  background-color: #2196F3;
+}
+.down-button:hover {
+  background-color: #1565C0;
+}
+
+ol {
+  padding: 0;
+  margin: 0;
+}
+li {
+  font-size: 22px;
+  font-weight: 500;
+  padding: 14px 18px;
+  background: #f7f7fa;
+  margin-bottom: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(130,118,234,0.06);
+}
+.text {
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+.text.completed {
+  text-decoration: line-through;
+  color: #2e7d32;
+  background: #d0f5dd;
+  opacity: 1;
+  border-radius: 4px;
+  padding: 2px 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.delete-button, .up-button, .down-button {
+  padding: 8px 12px;
+  font-size: 15px;
+  margin-left: 10px;
+}
