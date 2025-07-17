@@ -7,11 +7,11 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   text-align: center;
   margin: 60px auto 0 auto;
-  max-width: 600px;
+  max-width: 900px;
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 6px 32px 0 rgba(50,50,93,0.12), 0 1.5px 3px 0 rgba(0,0,0,0.10);
-  padding: 40px 32px 32px 32px;
+  padding: 40px 64px 32px 64px;
 }
 
 h1 {
@@ -87,7 +87,7 @@ ol {
 li {
   font-size: 22px;
   font-weight: 500;
-  padding: 14px 18px;
+  padding: 14px 48px;
   background: #f7f7fa;
   margin-bottom: 14px;
   border: 2px solid #e0e0e0;
